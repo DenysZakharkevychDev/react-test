@@ -2,7 +2,7 @@ import { Trans, useTranslation } from 'react-i18next';
 import './App.scss';
 import logo from './logo.svg';
 
-const lngs = {
+const lngs: any = {
   en: { nativeName: 'English' },
   de: { nativeName: 'Deutsch' },
 };
