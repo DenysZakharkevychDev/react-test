@@ -1,0 +1,5 @@
+@use './colors' as c;
+
+@mixin bg-color($color: c.$grey) {
+  background-color: $color;
+}

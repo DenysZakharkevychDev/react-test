@@ -1,10 +1,9 @@
-.App {
-  text-align: center;
-}
+@use './styles/colors';
+@use './styles/app';
+@use './styles/mixins' as m;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+%bg-color-shared {
+  background-color: colors.$grey;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,8 +12,22 @@
   }
 }
 
+%error {
+  border: solid (1px+10px) * 10 - 100;
+}
+
+.serious-error {
+  @extend %error;
+  color: grey;
+  &:hover {
+    color: white;
+  }
+}
+
 .App-header {
-  background-color: #282c34;
+  background-color: white;
+  // @extend %bg-color-shared;
+  @include m.bg-color;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,13 +38,14 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: colors.$blue;
 }
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

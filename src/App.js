@@ -1,5 +1,5 @@
 import { Trans, useTranslation } from 'react-i18next';
-import './App.css';
+import './App.scss';
 import logo from './logo.svg';
 
 const lngs = {
@@ -28,7 +28,7 @@ function App() {
             </button>
           ))}
         </div>
-        <p>
+        <p className='serious-error'>
           <Trans i18nKey='description.part1'>
             Edit <code>src/App.js</code> and save to reload.
           </Trans>
